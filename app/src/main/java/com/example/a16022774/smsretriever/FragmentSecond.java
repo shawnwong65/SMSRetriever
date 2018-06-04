@@ -75,9 +75,9 @@ public class FragmentSecond extends Fragment {
                 ContentResolver cr = getActivity().getContentResolver();
 
                 // The filter String
-                String filter = "body LIKE ? AND body LIKE ?";
+                String filter = "body LIKE ? AND body LIKE ? AND type = ?";
                 // The matches for ?
-                String[] filterArgs = {"%" + etWord1.getText().toString() + "%", "%" + etWord2.getText().toString() + "%"};
+                String[] filterArgs = {"%" + etWord1.getText().toString() + "%", "%" + etWord2.getText().toString() + "%", "1"};
 
                 // Fetch SMS Message from Built-in Content Provider
                 if(etWord1.getText().toString().isEmpty() && etWord2.getText().toString().isEmpty()){
